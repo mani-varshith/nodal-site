@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#050508" />
   <title>Nodal - Your life. Organized. Optimized.</title>
   <meta name="description" content="Track habits, expenses, mood, tasks, and notes in one colourful app. Data stays on your device." />
+  <link rel="icon" type="image/png" href="images/nodal-icon.png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="images/nodal-icon.png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -12,7 +15,10 @@
 
   <header class="topbar">
     <div class="container row between center">
-      <div class="brand">Nodal</div>
+      <a href="index.html" class="brand" aria-label="Nodal home">
+        <img src="images/nodal-icon.png" alt="" class="brand-logo" width="32" height="32" decoding="async" />
+        <span class="brand-text">Nodal</span>
+      </a>
       <nav class="nav" aria-label="Primary">
         <a href="#features">Features</a>
         <a href="#faq">FAQ</a>
@@ -227,7 +233,13 @@
 
   <footer class="footer">
     <div class="container row between center wrap row-footer">
-      <p>Track. Improve. Repeat.</p>
+      <div class="footer-lead">
+        <a href="index.html" class="footer-brand" aria-label="Nodal home">
+          <img src="images/nodal-icon.png" alt="" class="footer-brand-logo" width="28" height="28" decoding="async" />
+          <span class="footer-brand-name">Nodal</span>
+        </a>
+        <p class="footer-tagline">Track. Improve. Repeat.</p>
+      </div>
       <nav class="nav small" aria-label="Footer">
         <a href="privacy-policy.html">Privacy Policy</a>
         <a href="terms.html">Terms</a>

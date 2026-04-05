@@ -18,9 +18,36 @@ Then visit `http://localhost:8080`.
 
 ## Deploy on GitHub Pages
 
-1. Create a new GitHub repository.
-2. Upload all files from this folder.
-3. In GitHub repo settings, go to **Pages**.
-4. Set source to **Deploy from a branch**.
-5. Select branch `main` and folder `/ (root)`.
-6. Save and wait for deployment URL.
+This folder is already a git repo on branch `main` with an initial commit.
+
+### Option A: GitHub CLI (fastest)
+
+1. Log in once (opens browser):
+
+   ```bash
+   gh auth login
+   ```
+
+2. From this directory, create the repo on your account and push:
+
+   ```bash
+   cd /Users/venkatavarshithsivapuram/Documents/dailyos-site
+   gh repo create nodal-site --public --source=. --remote=origin --push
+   ```
+
+   Use another name if `nodal-site` is taken, e.g. `gh repo create nodal-website --public --source=. --remote=origin --push`.
+
+3. On GitHub: **Settings → Pages → Build and deployment → Deploy from a branch** → branch **main**, folder **/ (root)** → Save. Your site will be at `https://<username>.github.io/<repo>/`.
+
+### Option B: GitHub website
+
+1. Create a new empty repository (no README) on GitHub.
+2. Run:
+
+   ```bash
+   cd /Users/venkatavarshithsivapuram/Documents/dailyos-site
+   git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
+   git push -u origin main
+   ```
+
+3. Enable **Pages** as in step 3 of Option A.
